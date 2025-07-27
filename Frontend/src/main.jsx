@@ -7,7 +7,7 @@ import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './styles/theme';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/Dashboard';
+
 
 const queryClient = new QueryClient();
 

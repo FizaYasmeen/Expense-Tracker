@@ -5,6 +5,8 @@ import Expense from '../models/Expense.js';
 // @access  Private
 export const createExpense = async (req, res) => {
   try {
+    console.log("req.user:", req.user); 
+    console.log("req.body:", req.body); 
     const { amount, category, description } = req.body;
     
     const expense = await Expense.create({
@@ -16,6 +18,7 @@ export const createExpense = async (req, res) => {
 
     res.status(201).json(expense);
   } catch (error) {
+    console.error("Error in createExpense:", error);
     res.status(500).json({ message: 'Server error' });
   }
 };
